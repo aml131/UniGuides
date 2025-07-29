@@ -4,8 +4,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"node server.js",
-    "dev":"nodemon server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
@@ -13,12 +13,21 @@
   "description": "",
   "dependencies": {
     "bcrypt": "^6.0.0",
-    "dotenv": "^17.2.0",
+    "dotenv": "^17.2.1",
     "ejs": "^3.1.10",
     "express": "^5.1.0",
     "express-session": "^1.18.2",
     "method-override": "^3.0.0",
-    "mongoose": "^8.16.4",
+    "mongoose": "^8.16.5",
     "morgan": "^1.10.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GA-SEB-8/Unit02-Auth-Starter-Template.git"
+  },
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/GA-SEB-8/Unit02-Auth-Starter-Template/issues"
+  },
+  "homepage": "https://github.com/GA-SEB-8/Unit02-Auth-Starter-Template#readme"
 }
