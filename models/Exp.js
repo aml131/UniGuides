@@ -90,3 +90,7 @@ created:{
 
 
 })
+
+const Exp = mongoose.model('Exp', expSchemma)
+
+module.exports = Exp
