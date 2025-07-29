@@ -26,6 +26,26 @@ router.post("/sign-up", async (req, res) => {
             });
         }
 
+        if(!/[A-Z]/.test(password)){
+             return res.render("auth/sign-up", {
+                error: "Password must contain at least uppercase letter."
+            });
+        }
+
+           if(!/[a-z]/.test(password)){
+             return res.render("auth/sign-up", {
+                error: "Password must contain at least one lowercase letter."
+            });
+        }
+
+            if(!/[0-9]/.test(password)){
+             return res.render("auth/sign-up", {
+                error: "Password must contain at least one number."
+            });
+        }
+
+
+
         if(password != password2){
             return res.render("auth/sign-up", {
             error: "Please make sure passwords match."
