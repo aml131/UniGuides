@@ -3,13 +3,14 @@ const User = require("../models/User")
 const bcrypt = require("bcrypt")
 
 
+
 router.get("/sign-up", (req, res) => {
     res.render("auth/sign-up.ejs", { error: null })
 })
 
 router.post("/sign-up", async (req, res) => {
     try {
-        const { username, password } = req.body;
+        const { username, password , password2 } = req.body;
 
         // VALIDATION
         //  Check if all the necessary fields are there
@@ -19,18 +20,18 @@ router.post("/sign-up", async (req, res) => {
             });
         }
 
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
-            return res.render("auth/sign-up", {
-                error: "Please enter a valid email address."
-            });
-        }
-
         if (password.length < 6) {
             return res.render("auth/sign-up", {
                 error: "Password must be at least 6 characters long."
             });
         }
+
+        if(password != password2){
+            return res.render("auth/sign-up", {
+            error: "Please make sure passwords match."
+            })
+        }
+
 
         // Do we already have this person in our database?
         const existingUser = await User.findOne({ username });

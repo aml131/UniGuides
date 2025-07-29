@@ -1,8 +1,7 @@
 <nav>
     <% if (user){ %>
+<p>Welcome Back <%= user.username %> ! Ready to explore new experiences?</p>
     <a href="/auth/logout">Logout</a>
-    <%= user.username %>
-
 
     <%} else{ %>
     <a href="/auth/login">Login</a>
