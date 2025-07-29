@@ -10,7 +10,7 @@ router.get("/sign-up", (req, res) => {
 
 router.post("/sign-up", async (req, res) => {
     try {
-        const { username, password , password2 } = req.body;
+        const { first, last, username, password , password2 } = req.body;
 
         // VALIDATION
         //  Check if all the necessary fields are there
@@ -53,6 +53,15 @@ router.post("/sign-up", async (req, res) => {
         }
 
 
+
+        if (first.length < 2) {
+            return res.render("auth/sign-up", {
+                error: "First name must be at least 2 characters long."
+            });
+        }
+
+
+
         // Do we already have this person in our database?
         const existingUser = await User.findOne({ username });
         if (existingUser) {
@@ -66,6 +75,8 @@ router.post("/sign-up", async (req, res) => {
         // Hash password and create user
         const hashedPassword = bcrypt.hashSync(password, 10);
         const newUser = {
+            first,
+            last,
             username,
             password: hashedPassword,
         };
@@ -109,6 +120,7 @@ router.post("/login", async (req, res) => {
         req.session.user = {
             username: userInDatabase.username,
             _id: userInDatabase._id,
+            first: userInDatabase.first,
         };
 
         res.redirect("/");

@@ -9,6 +9,15 @@ const userSchema = new mongoose.Schema({
     password:{
         type:String,
         required:[true, "password is required"]
+    },
+    first:{
+        type:String,
+        required:[true, 'don\'t forget to write your first name']
+    },
+
+    last:{
+        type:String,
+        required:[true, 'don\'t forget to write your last name']
     }
 })
 

@@ -2,53 +2,18 @@ const mongoose = require("mongoose")
 
 const expSchemma = new mongoose.Schema({
   
-school:{
-type: String,
-enum: [
-  "School of Business",
-  "School of Creative Media",
-  "School of Engineering",
-  "School of ICT",
-  "School of Logistics & Maritime Studies"
-]
-},
-   major:{
-    type: String,
-    required:[true, "Please choose the major" ],
-    enum: [
-  "Accounting",
-  "Animation and Visual Effects",
-  "Banking and Finance",
-  "Business Management",
-  "Chemical and Industrial Processes Engineering",
-  "Civil Engineering",
-  "Communications and Networks",
-  "Cybersecurity",
-  "Data Analytic",
-  "Database Systems",
-  "Digital Filmmaking",
-  "Digital Marketing",
-  "Electrical Engineering",
-  "Electromechanical Engineering",
-  "Electronics Engineering",
-  "Film & Animation",
-  "Financial Technology",
-  "Human Resource Management",
-  "Information Systems",
-  "Industrial Design and Process Engineering",
-  "Industrial Instrumentation and Automatic Control Engineering",
-  "International Logistics Management",
-  "Marketing",
-  "Mechanical Engineering",
-  "Networking",
-  "Programming",
-  "Renewable and Clean Energy Engineering",
-  "Supply Chain Management",
-  "Visual Design",
-  "Web Media"
-]
+name:[{
+    type:mongoose.Schema.Types.ObjectId,
+    ref: 'User'
+}],
+    
+   major:[{
+    type:mongoose.Schema.Types.ObjectId,
+    ref: 'Major',
+    required: true
+   }],
 
-   },
+
 university:{
 type: String,
 enum : [
