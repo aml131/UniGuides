@@ -2,11 +2,10 @@ const mongoose = require("mongoose")
 
 const expSchemma = new mongoose.Schema({
   
-name:[{
+name:{
     type:mongoose.Schema.Types.ObjectId,
     ref: 'User'
-}],
-
+},
 
 university:{
 type: String,
@@ -42,6 +41,10 @@ contact: {
 type: String
 },
 
+major:{
+    type:mongoose.Schema.Types.ObjectId,
+    ref: 'Major'
+}
 
 
 

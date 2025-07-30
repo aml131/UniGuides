@@ -1,4 +1,5 @@
 const mongoose = require("mongoose")
+const Exp = require('../models/Exp')
 
 const userSchema = new mongoose.Schema({
     username:{
@@ -18,7 +19,7 @@ const userSchema = new mongoose.Schema({
     last:{
         type:String,
         required:[true, 'don\'t forget to write your last name']
-    }
+    },
 })
 
 const User = mongoose.model("User",userSchema)

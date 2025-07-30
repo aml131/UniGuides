@@ -7,5 +7,15 @@
 </head>
 <body>
        <h1><%=foundMajor.name%> jorunies</h1> 
+       <% foundExp.forEach((oneExperience)=>{%>
+        <p>Shared by: <%=oneExperience.name.first%> <%=oneExperience.name.last%> </p>
+        <p>University: <%=oneExperience.university%></p>
+        <p>Tuition Fees: <%= oneExperience.fees%> BHD per semester</p>
+        <p>Difficulties Faced: <%= oneExperience.challanges%></p>
+        <p>About the major: <%= oneExperience.aboutMajor%></p>
+        <p>Contact me on instagram If you had any more inquiry about the major</p>
+        <p>@<%= oneExperience.contact%></p>
+
+       <% })%>
 </body>
 </html>

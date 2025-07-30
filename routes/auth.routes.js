@@ -124,7 +124,7 @@ router.post("/login", async (req, res) => {
             last: userInDatabase.last
         };
 
-        res.redirect("/");
+        res.redirect("/majors");
     } catch (error) {
         console.error("Error during sign-in:", error);
         res.render("auth/sign-in", { error: "An unexpected error occurred." });
