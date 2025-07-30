@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>All Majors</h1>
+    <div class="majors">
+    <% allMajors.forEach((oneMajor)=>{ %>
+        <h2>
+        <li>
+            <%=oneMajor.name%>
+        </li>
+        </h2>
+        </div>
+
+        <div class="links">
+        Hear from <a href="/majors/<%= oneMajor._id%>"><%=oneMajor.name%></a> students!
+</div>
+        <%})%>
+    </h2>
+</body>
+</html>
