@@ -121,6 +121,7 @@ router.post("/login", async (req, res) => {
             username: userInDatabase.username,
             _id: userInDatabase._id,
             first: userInDatabase.first,
+            last: userInDatabase.last
         };
 
         res.redirect("/");

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1>Share your experience</h1> 
+   <h3>Shared by: <%=user.first %> <%= user.last%></h3>
+   
+   <h3>fill in your info 👇</h3>
+   <form action="/exp" method="post">
+    <!-- Select -->
+    <select name="university" id="university">
+  <option value="" disabled selected>Select your university</option>
+  <option value="Bahrain Polytechnic">Bahrain Polytechnic</option>
+  <option value="University of Bahrain">University of Bahrain</option>
+  <option value="Arab Open University">Arab Open University</option>
+  <option value="Applied Science University">Applied Science University</option>
+  <option value="Gulf University">Gulf University</option>
+  <option value="Royal University for Women">Royal University for Women</option>
+  <option value="Ahlia University">Ahlia University</option>
+  <option value="University of Strathclyde">University of Strathclyde</option>
+  <option value="British University of Bahrain">British University of Bahrain</option>
+  <option value="American University of Bahrain">American University of Bahrain</option>
+  <option value="University College of Bahrain">University College of Bahrain</option>
+  <option value="University of Technology Bahrain">University of Technology Bahrain</option>
+  </select> <br> <br>
+
+<!-- fees -->
+<label for="fees">Tuition Fees :</label>
+<input type="number" name="fees" id="fees" placeholder="BHD"> <br> <br>
+
+<!-- difficulties -->
+<label for="challanges">Difficulties Faced :</label>
+<textarea name="challanges" id="challanges" rows="2" cols="40" placeholder="Write about the difficulties you faced..."></textarea> <br> <br>
+<!-- about major -->
+ <label for="aboutMajor"> About your major:</label>
+<textarea name="aboutMajor" id="aboutMajor" rows="2" cols="40" placeholder="Challenges?"></textarea> <br> <br>
+<!-- contact -->
+<label for="contact">Tuition Fees :</label>
+<input type="text" name="contact" id="contact" placeholder="Your Instagram Account"> <br> <br>
+<!-- submit -->
+<button type="submit">Shar</button>
+
+   </form>
+</body>
+</html>

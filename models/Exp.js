@@ -6,12 +6,6 @@ name:[{
     type:mongoose.Schema.Types.ObjectId,
     ref: 'User'
 }],
-    
-   major:[{
-    type:mongoose.Schema.Types.ObjectId,
-    ref: 'Major',
-    required: true
-   }],
 
 
 university:{
@@ -48,10 +42,7 @@ contact: {
 type: String
 },
 
-created:{
-    type: Date,
-    Default: Date.now
-}
+
 
 
 })

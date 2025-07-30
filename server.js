@@ -9,6 +9,7 @@ const authRoutes = require("./routes/auth.routes")
 const session = require("express-session")
 const passUserToView = require('./middleware/passUserToView')
 const isSignedIn = require("./middleware/isSignedIn")
+const expRoutes = require ('./routes/exp.routes')
 const majorRoutes = require("./routes/major.routes")
 
 
@@ -44,8 +45,10 @@ conntectToDB()
 
 
 
-app.use("/majors", majorRoutes)
+
 app.use("/auth",authRoutes)
+app.use("/majors", majorRoutes)
+app.use('/exp', expRoutes)
 app.use(isSignedIn) //all your protected routes go below this middleware
 // Routes go here
 

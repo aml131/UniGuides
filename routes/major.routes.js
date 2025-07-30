@@ -27,15 +27,8 @@ router.get('/',async(req,res)=>{
     }
 })
 
-router.get('/:majorId', async(req,res)=>{
-    try{
-        const foundMajor = await Major.findById(req.params.majorId)
-        res.render('exp/details.ejs', {foundMajor: foundMajor})
-    }
-    catch(error){
-        console.log(error)
-    }
-})
+
+
 
 
 module.exports = router
