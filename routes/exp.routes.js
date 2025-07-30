@@ -45,4 +45,9 @@ router.post('/:majorId', async(req,res)=>{
     }
 })
 
+//user watch the posts he made only
+
+
+
+
 module.exports = router
