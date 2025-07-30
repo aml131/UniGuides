@@ -18,6 +18,17 @@ router.get('/create', async(req,res)=>{
     }
 })
 
+//POST
+router.post('/', async(req,res)=>{
+    try{
+        await Exp.create(req.body)
+        res.redirect('/')
+    }
+    catch(error){
+        console.log(error)
+    }
+})
+
 
 //read
 router.get('/:majorId', async(req,res)=>{
