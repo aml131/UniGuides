@@ -4,21 +4,6 @@ const Exp = require ('../models/Exp')
 const Major = require ('../models/Major')
 const session = require("express-session")
 
-//read
-router.get('/:majorId', async (req, res) => {
-  try {
-    const foundMajor = await Major.findById(req.params.majorId)
-    const foundExp = await Exp.find({ major: req.params.majorId }).populate('name')
-    console.log(foundExp)
-    res.render('exp/details.ejs', {
-      foundMajor: foundMajor,
-      foundExp: foundExp
-    });
-  } catch (error) {
-    console.log(error);
-  }
-})
-
 //create
 
 //GET
@@ -53,6 +38,21 @@ router.get('/myexp' , async(req,res)=>{
     res.render('exp/myExp.ejs', {myExp: myExp})
   } catch (error) {
     console.log(error)
+  }
+})
+
+//read
+router.get('/:majorId', async (req, res) => {
+  try {
+    const foundMajor = await Major.findById(req.params.majorId)
+    const foundExp = await Exp.find({ major: req.params.majorId }).populate('name')
+    console.log(foundExp)
+    res.render('exp/details.ejs', {
+      foundMajor: foundMajor,
+      foundExp: foundExp
+    });
+  } catch (error) {
+    console.log(error);
   }
 })
 
