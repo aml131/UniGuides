@@ -46,8 +46,14 @@ router.post('/:majorId', async(req,res)=>{
 })
 
 //user watch the posts he made only
-
-
-
+router.get('/myexp' , async(req,res)=>{
+  try {
+    const myExp= await Exp.find({name:req.session.user._id}).populate('name')
+   console.log(myExp)
+    res.render('exp/myExp.ejs', {myExp: myExp})
+  } catch (error) {
+    console.log(error)
+  }
+})
 
 module.exports = router
