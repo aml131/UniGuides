@@ -18,6 +18,13 @@
         <p>Difficulties Faced: <%= exp.challanges%></p>
         <p>Contact me on instagram If you had any more inquiry about the major</p>
         <p>@<%= exp.contact%></p>
+        <form action="/exp/updateExp/<%= exp._id %>" method="get">
+    <button type="submit" >Edit your post</button>
+    </form>
+    
+     <form action="/exp/myExp<%= exp._id %>" method="post">
+    <button type="submit" >Delete your post</button>
+    </form>
         <%}%>
     <%}%>
    <% }) %>

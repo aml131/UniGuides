@@ -5,7 +5,6 @@ const Major = require ('../models/Major')
 const session = require("express-session")
 
 //create
-
 //GET
 router.get('/:majorId/new', async(req,res)=>{
     try{
@@ -29,6 +28,28 @@ router.post('/:majorId', async(req,res)=>{
         console.log(error)
     }
 })
+//update
+router.get('/updateExp/:id',async(req,res)=>{
+  try{
+    const foundExp = await Exp.findById(req.params.id)
+    res.render("exp/updateExp.ejs",{exp : foundExp}) 
+  }
+  catch(error){
+    console.log(error)
+  }
+})
+
+router.put('/updateExp/:expId', async (req,res)=>{
+  try{
+    const updatedExp = await Exp.findByIdAndUpdate(req.params.expId, req.body)
+    res.redirect('/exp/myexp')
+  }
+  catch{
+    console.log(error)
+  }
+})
+
+//Delete
 
 //user watch the posts he made only
 router.get('/myexp' , async(req,res)=>{
