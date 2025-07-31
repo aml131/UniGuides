@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+     <%- include('../partials/navbar2') %>
        <h1><%=foundMajor.name%> jorunies</h1> 
        <% foundExp.forEach((oneExperience)=>{%>
         <h3>Shared by: <%=oneExperience.name.first%> <%=oneExperience.name.last%> </h3>
