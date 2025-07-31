@@ -6,7 +6,21 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>my exp</h1>
+    <h1>My Experience</h1>
+    
+    <% myExp.forEach((exp)=>{%>
+<%if (user){%>
+        <% if (user.username === exp.name.username){%>
+        <h3>Shared by: <%=exp.name.first%> <%=exp.name.last%> </h3>
+        <p>University: <%=exp.university%></p>
+        <p>Tuition Fees: <%= exp.fees%> BHD per semester</p>
+        <p>About the major: <%= exp.aboutMajor%></p>
+        <p>Difficulties Faced: <%= exp.challanges%></p>
+        <p>Contact me on instagram If you had any more inquiry about the major</p>
+        <p>@<%= exp.contact%></p>
+        <%}%>
+    <%}%>
+   <% }) %>
     
 </body>
 </html>
