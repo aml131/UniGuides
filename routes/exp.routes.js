@@ -3,7 +3,7 @@ const User = require("../models/User")
 const Exp = require ('../models/Exp')
 const Major = require ('../models/Major')
 const session = require("express-session")
-
+const isSignedIn = require("../middleware/isSignedIn")
 //create
 //GET
 router.get('/:majorId/new', async(req,res)=>{
@@ -44,16 +44,26 @@ router.put('/updateExp/:expId', async (req,res)=>{
     const updatedExp = await Exp.findByIdAndUpdate(req.params.expId, req.body)
     res.redirect('/exp/myexp')
   }
-  catch{
+  catch(error){
     console.log(error)
   }
 })
 
 //Delete
+router.delete('/myexp/:expId', async(req,res)=>{
+  try{
+    console.log("IN DELETE")
+    await Exp.findByIdAndDelete(req.params.expId)
+    res.redirect('/exp/myexp')
+  }catch(error){
+    console.log(error)
+  }
+})
 
 //user watch the posts he made only
-router.get('/myexp' , async(req,res)=>{
+router.get('/myexp' ,isSignedIn, async(req,res)=>{
   try {
+    console.log("in myexp route")
     const myExp= await Exp.find({name:req.session.user._id}).populate('name')
    console.log(myExp)
     res.render('exp/myExp.ejs', {myExp: myExp})

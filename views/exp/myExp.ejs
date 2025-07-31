@@ -22,7 +22,7 @@
     <button type="submit" >Edit your post</button>
     </form>
     
-     <form action="/exp/myExp<%= exp._id %>" method="post">
+     <form action="/exp/myExp/<%= exp._id %>?_method=DELETE" method="post">
     <button type="submit" >Delete your post</button>
     </form>
         <%}%>
