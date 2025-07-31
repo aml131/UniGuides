@@ -11,6 +11,7 @@ const passUserToView = require('./middleware/passUserToView')
 const isSignedIn = require("./middleware/isSignedIn")
 const expRoutes = require ('./routes/exp.routes')
 const majorRoutes = require("./routes/major.routes")
+const homeRoutes = require("./routes/home.routes")
 
 
 
@@ -45,7 +46,7 @@ conntectToDB()
 
 
 
-
+app.use('/home', homeRoutes)
 app.use("/auth",authRoutes)
 app.use("/majors", majorRoutes)
 app.use('/exp', expRoutes)
