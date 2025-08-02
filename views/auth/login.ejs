@@ -5,26 +5,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/auth/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <%- include('../partials/navbar') %>
+   <div class="parent">
+
+    <div class="div2">
+    
+    <div class="loginboard">
         <h1>Log in</h1>
         <form action="/auth/login" method="post">
-            <label for="username">username:</label>
-            <input type="text" name="username" id="username">
+            <label for="username">Username</label> <br>
+            <input type="text" name="username" id="username"> <br> <br>
 
-            <label for="password">password:</label>
-            <input type="password" name="password" id="password">
-
-            <button>Login</button>
-        </form>
-
-        <% if (error) { %>
-            <p style="color:red" class="error">
+            <label for="password">Password</label> <br>
+            <input type="password" name="password" id="password"> <br>
+            <div class="error">
+            <% if (error) { %>
+            <p style="color:rgb(142, 9, 9)" class="error">
                 <%= error %>
             </p>
             <% } %>
+</div>
+            <button>Login</button>
+        </form>
+        </div>
+        </div>
+         <div class="div1">
+            <div class="img">
+    <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js" type="module"></script>
+<dotlottie-wc src="https://lottie.host/9af40a75-1ef9-4062-b983-35094e7d9930/TriDuhzjNv.lottie" style="width: 400px;height: 400px" speed="1" autoplay loop></dotlottie-wc>
+        <div class="notmemberyet">
+<p>Not a member yet?</p>
+        <a href="/auth/sign-up"> Sign-up Now</a>
+        </div>
+
+        </div>
+
+            </div> 
 
 </body>
 
