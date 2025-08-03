@@ -4,36 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/auth/signup.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-        <%- include('../partials/navbar') %>
+    <div class="parent">
 
+<div class="div2">
+  <div class="img">
+   <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js" type="module"></script>
+<dotlottie-wc src="https://lottie.host/9af40a75-1ef9-4062-b983-35094e7d9930/TriDuhzjNv.lottie" style="width: 400px;height: 400px" speed="1" autoplay loop></dotlottie-wc>
+</div>
+<div class="alreadyamember">
+ <p>Already a member?</p>
+        <a href="/auth/login.ejs"> Login</a>
+        </div>
+        </div>
+  <div class="div1">
+    <div class="signupboard"> 
     <h1>Sign Up</h1>
     <form action="/auth/sign-up" method="post">
-
-         <label for="first">First Name :</label>
-        <input type="text" name="first" id="first">
-
-        <label for="last">Last Name :</label>
-        <input type="text" name="last" id="last"> <br> <br>
-
-
-        <label for="username">Username:</label>
-        <input type="text" name="username" id="username"> <br> <br>
-
-        <label for="password">Password:</label>
-        <input type="password" name="password" id="password"> <br> <br>
-
-         <label for="password2">Repeat password:</label>
-        <input type="password" name="password2" id="password2"> <br> <br>
+      <div class="names">
+        <div>
+          <label for="firstandlast"> Name</label> 
+        </div>
+        <div class="name-inputs">
+          <label for="first"></label>
+          <input type="text" name="first" id="first" placeholder="First">
+  
+          <label for="last"></label>
+          <input type="text" name="last" id="last" placeholder="Last"> <br> <br>
+        </div>
+      </div>
 
 
+        <div class="userpass">
+          <div class="username-field">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username"> <br> <br>
+          </div>
+
+          <div class="password-field">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password"> <br> <br>
+          </div>
+          
+          <div class="password2-field">
+            <label for="password2">Repeat password</label>
+            <input type="password" name="password2" id="password2"> <br> <br>
+          </div>
+        </div>
+
+        <div class="btn">
         <button>Sign Up</button> 
+        </div>
     </form>
+    <div class="error">
     <% if (error) { %>
-  <p style="color:red" class="error"><%= error %></p>
+  <p style="color:rgb(142, 9, 9)" class="error"><%= error %></p>
 <% } %>
- <p>Already a member</p>
-        <a href="/auth/login.ejs"> login</a>
+    </div>
+</div>   
+</div>
+</div>        
 </body>
 </html>
