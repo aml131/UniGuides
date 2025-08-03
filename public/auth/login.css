@@ -31,9 +31,9 @@ background: linear-gradient(240deg, rgba(249, 219, 207, 1) 0%, rgba(210, 208, 23
   font-size: 17px;
 }
 a{
+  font-weight: 420;
    background: linear-gradient(13deg, rgba(249, 219, 207, 1) 0%, rgba(210, 208, 238, 1) 68%);
     color: #454A85;
-    font-weight: bold;
   width: 170px;
     height: 50px;
     border-radius: 30px;
@@ -43,6 +43,13 @@ a{
   justify-content: center;
   text-decoration: none;
   font-size: 20px;
+
+  outline: 0px solid #F3EAEF;
+transition: outline 0.3s ease 0s;
+}
+a:hover {
+  outline: 1.7px solid #454A85;
+  transform: scale(1);
 }
 
 .img{
@@ -83,17 +90,24 @@ a{
 }
 
 button{
+  font-family: 'Raleway';
+  font-weight: 420;
     margin-top: 50px;
     background: #F9DBCF;
     background: linear-gradient(13deg, rgba(249, 219, 207, 1) 0%, rgba(210, 208, 238, 1) 68%);
     color: #454A85;
-    font-weight: bold;
     width: 230px;
     height: 50px;
     border-radius: 30px;
     border:none;
     font-size: 20px; 
     cursor: pointer;
+  outline: 0px solid #F3EAEF;
+transition: outline 0.3s ease 0s;
+}
+button:hover {
+  outline: 1.7px solid #454A85;
+  transform: scale(1);
 }
 h1{
     font-size: 50px;

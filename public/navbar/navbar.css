@@ -19,7 +19,6 @@ nav a{
   white-space: nowrap;
   text-align: left;
   color:#886dc7;
-  font-size: 500;
 }
 
 .logout{
@@ -30,6 +29,14 @@ nav a{
     border-radius: 30px;
     height: 40px;
     width: 90px;
+
+    outline: 0px solid #F7DBD0;
+transition: outline 0.3s linear 0s;
+}
+
+.logout:hover {
+  outline: 2px solid #886DC6;
+  transform: scale(1);
 }
 
 .logout a{
@@ -44,6 +51,7 @@ color:#454a85;
   overflow: hidden;
   padding-bottom: 3px;
   margin-left: 120px;
+  
 }
 
 .navs a::after {
@@ -60,4 +68,17 @@ color:#454a85;
 .navs a:hover::after {
   width: 100%;
   animation: heartbeat116 1.5s ease-in-out 0.3s infinite;
+}
+
+.footer {
+    font-size: small;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #FEFBEA;
+  color: #454A85;
+  text-align: center;
+  border-top-left-radius: 30px;
+border-top-right-radius: 30px;
 }

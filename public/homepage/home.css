@@ -3,3 +3,49 @@ body{
    font-family: "Raleway", sans-serif;
    background-color: #F2EAEF;
 }
+
+
+.text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 80vh;
+}
+
+
+
+h1{
+    color:#2D3055;
+    font-size: 72px;
+}
+
+.text a{
+    margin-top: 10px;
+    color: #454A85;
+    display: flex;
+    border-radius: 30px;
+    background: linear-gradient(240deg, rgba(249, 219, 207, 1) 0%, rgba(210, 208, 238, 1) 100%);
+     width: 272px;
+    height: 66px;
+     align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 22px;
+
+
+  outline: 0px solid #F3EAEF;
+transition: outline 0.3s ease 0s;
+}
+.text a:hover {
+  outline: 1.7px solid #454A85;
+  transform: scale(1);
+}
+
+
+
+.text p{
+    font-size: 22px;
+    color: #454A85;
+}
