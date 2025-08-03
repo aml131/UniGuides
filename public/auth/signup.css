@@ -106,6 +106,7 @@ button{
 }
 
 h1{
+    margin-bottom: 60px;
     font-size: 50px;
     color: #2d3056;
 }
@@ -114,6 +115,8 @@ form{
     font-size: 18px;
 }
 input{
+    font-family:'Raleway' ;
+    font-size: medium;
     text-align: center;
     color:#2e4c9f;
     border-radius: 30px;
@@ -123,7 +126,7 @@ input{
     opacity: 60%;
 }
 .names {
-    gap:10px;
+    gap:55px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -168,6 +171,8 @@ display: flex;
 
 
 ::placeholder{
+padding-left: 20px;
+text-align: left;
     font-family: "Raleway";
     font-size: medium;
     color:#886dc7;

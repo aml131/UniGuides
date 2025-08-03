@@ -104,6 +104,8 @@ form{
     font-size: 18px;
 }
 input{
+  font-family: 'Raleway';
+  font-size: medium;
     text-align: center;
     color:#886dc7;
     border-radius: 30px;

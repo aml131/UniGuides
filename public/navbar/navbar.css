@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background: linear-gradient(240deg, rgba(249, 219, 207, 1) 0%, rgba(210, 208, 238, 1) 100%);
+  font-family: "Raleway", sans-serif;
+  border-radius: 30px;
+}
+
+nav a{
+    font-weight: 500;
+    text-decoration: none;
+    gap: 10px;
+}
+
+.welcome {
+  white-space: nowrap;
+  text-align: left;
+  color:#886dc7;
+  font-size: 500;
+}
+
+.logout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #454a85;
+    border-radius: 30px;
+    height: 40px;
+    width: 90px;
+}
+
+.logout a{
+    text-align: center;
+     color: #FEFBEA;
+}
+/* this is a template👇 */
+.navs a {
+color:#454a85;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 3px;
+  margin-left: 120px;
+}
+
+.navs a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1.7px;
+  background-color: #454A85;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+.navs a:hover::after {
+  width: 100%;
+  animation: heartbeat116 1.5s ease-in-out 0.3s infinite;
+}

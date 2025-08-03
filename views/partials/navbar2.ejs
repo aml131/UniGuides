@@ -1,10 +1,17 @@
 <nav>
+    <link rel="stylesheet" href="/navbar/navbar.css">
     <% if (user){ %>
+        <div class="welcome">
 <p>Welcome Back <%= user.first %> ! Explore real stories, Choose wisely.</p>
+</div>
+<div class="navs">
 <a href="/home">Home</a>
 <a href="/majors">View All Experiences</a>
 <a href="/exp/myexp">My posts</a>
-<a href="/auth/logout">Logout</a>
+</div>
+<div class="logout">
+<a href="/auth/logout" class="logout-link">Logout</a>
+</div>
 
     <%} else{ %>
     <a href="/home">Home</a>
