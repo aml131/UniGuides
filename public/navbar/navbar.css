@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 nav {
+      background: linear-gradient(240deg, rgba(249, 219, 207, 1) 0%, rgba(210, 208, 238, 1) 100%);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 30px;
-  background: linear-gradient(240deg, rgba(249, 219, 207, 1) 0%, rgba(210, 208, 238, 1) 100%);
   font-family: "Raleway", sans-serif;
   border-radius: 30px;
 }
