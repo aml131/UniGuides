@@ -48,3 +48,40 @@ color: #886DC6;
   width: 100%;
   animation: heartbeat116 1.5s ease-in-out 0.3s infinite;
 }
+
+.find p{
+    color: #454A85;
+}
+.find{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+}
+    
+.find a{
+    margin-top: 10px;
+    color: #454A85;
+    display: flex;
+    border-radius: 30px;
+    background: linear-gradient(240deg, rgba(249, 219, 207, 1) 0%, rgba(210, 208, 238, 1) 100%);
+     width: 90px;
+    height: 40px;
+     align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 16px;
+
+
+  outline: 0px solid #F3EAEF;
+transition: outline 0.3s ease 0s;
+}
+.find a:hover {
+  outline: 1.7px solid #454A85;
+  transform: scale(1);
+}
+.find{
+    position:fixed;
+    bottom:56px;
+    left:655px
+}

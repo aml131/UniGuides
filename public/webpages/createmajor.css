@@ -15,18 +15,34 @@ body{
 }
 
 input{
+    font-family: 'Raleway';
+  font-size: medium;
+    text-align: center;
+    color:#886dc7;
     border:none;
     height: 70px;
     width: 300px;
     border-radius: 100px;
 }
 button{
+    color: #454A85;
     font-family:'Raleway' ;
     font-size:20px;
+    font-weight: 450;
     border: none;
-    width: 150px;
-    height: 70px;
+    width: 140px;
+    height: 60px;
     border-radius: 70px;
-    background:  linear-gradient(240deg, rgba(249, 219, 207, 1) 0%, rgba(210, 208, 238, 1) 100%);;
+    background:  linear-gradient(240deg, rgba(249, 219, 207, 1) 0%, rgba(210, 208, 238, 1) 100%);
+    cursor: pointer;
+  outline: 0px solid #F3EAEF;
+transition: outline 0.3s ease 0s;
+}
+button:hover {
+  outline: 1.7px solid #454A85;
+  transform: scale(1);
+}
 
+.find{
+    height:100%
 }
