@@ -1,4 +1,4 @@
-# Project 1: Exam Slice
+# Project 2: UniGuides
 <img width="1470" height="956" alt="Screenshot 2025-08-04 at 11 11 02 PM" src="https://github.com/user-attachments/assets/bb4785fc-baef-4191-8edf-7fe3b546fad2" />
 
 ## Introduction
