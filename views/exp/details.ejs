@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/webpages/details.css">
 </head>
 <body>
+  <div>
      <%- include('../partials/navbar2') %>
        <h1><%=foundMajor.name%> jorunies</h1> 
        <% foundExp.forEach((oneExperience)=>{%>
@@ -18,7 +20,10 @@
         <p>@<%= oneExperience.contact%></p>
 
        <% })%>
-       <a href="/exp/<%= foundMajor._id %>/new">Share Your Experience in <%= foundMajor.name %></a>
-
+       </div>
+       <div class="share">
+         <a href="/exp/<%= foundMajor._id %>/new">Share Your Experience in <%= foundMajor.name %></a>
+       </div>
+       
 </body>
 </html>
