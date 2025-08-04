@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+   font-family: "Raleway", sans-serif;
+   background-color: #F2EAEF;
+}
+
 nav {
       background: linear-gradient(240deg, rgba(249, 219, 207, 1) 0%, rgba(210, 208, 238, 1) 100%);
   display: flex;
@@ -71,6 +76,7 @@ color:#454a85;
 }
 
 .footer {
+  font-family:"Raleway" ;
     font-size: small;
   position: fixed;
   left: 0;
