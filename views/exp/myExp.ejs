@@ -4,31 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/webpages/my.css">
 </head>
 <body>
      <%- include('../partials/navbar2') %>
     <h1>My Experience</h1>
-    
+    <div class="exp">
     <% myExp.forEach((exp)=>{%>
+        
 <%if (user){%>
-        <% if (user.username === exp.name.username){%>
-        <h3>Shared by: <%=exp.name.first%> <%=exp.name.last%> </h3>
-        <p>University: <%=exp.university%></p>
-        <p>Tuition Fees: <%= exp.fees%> BHD per semester</p>
-        <p>About the major: <%= exp.aboutMajor%></p>
-        <p>Difficulties Faced: <%= exp.challanges%></p>
-        <p>Contact me on instagram If you had any more inquiry about the major</p>
-        <p>@<%= exp.contact%></p>
-        <form action="/exp/updateExp/<%= exp._id %>" method="get">
-    <button type="submit" >Edit your post</button>
-    </form>
-    
-     <form action="/exp/myExp/<%= exp._id %>?_method=DELETE" method="post">
-    <button type="submit" >Delete your post</button>
-    </form>
-        <%}%>
-    <%}%>
-   <% }) %>
+        <% if (user.username===exp.name.username){%>
+            <div class="wrap">
+            <div class="expboard">
+                <h3>Shared by: <%=exp.name.first%>
+                        <%=exp.name.last%>
+                </h3>
+                <h4>University: <%=exp.university%>
+                </h4>
+                <h4>Tuition Fees: <%= exp.fees%> BHD per semester</h4>
+                <p>About the major: <%= exp.aboutMajor%>
+                </p>
+                <p>Difficulties Faced: <%= exp.challanges%>
+                </p>
+                <div class="contact">
+                    <div class="contacttext">
+                        <h6>Contact me on instagram If you had any more inquiry about the major</h6>
+                    </div>
+                    <div class="ig">
+                        <h6>@<%= exp.contact%>
+                        </h6>
+                    </div>
+                </div>
+                </div>
+                
+                <div class="btns">
+                    <form action="/exp/updateExp/<%= exp._id %>" method="get">
+                        <button type="submit" >Edit</button>
+                    </form>
+                    
+                    <form action="/exp/myExp/<%= exp._id %>?_method=DELETE" method="post">
+                        <button type="submit" >Delete</button>
+                    </form>
+                    <%}%>
+                    <%}%>
+                    <% })%>
+                </div>
+                </div>
+   </div>
    <%- include('../partials/footer') %>
     
 </body>
