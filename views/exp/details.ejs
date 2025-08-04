@@ -7,23 +7,31 @@
     <link rel="stylesheet" href="/webpages/details.css">
 </head>
 <body>
-  <div>
-     <%- include('../partials/navbar2') %>
-       <h1><%=foundMajor.name%> jorunies</h1> 
+  <%- include('../partials/navbar2') %>
+  <div class="top">
+    <div class="item">
+  <h1><%=foundMajor.name%> journies</h1> 
+  </div>
+  <div class="share">
+    <div class="item">
+
+      <a href="/exp/<%= foundMajor._id %>/new">Share Your Experience in <%= foundMajor.name %></a>
+    </div>
+    </div>
+       </div>
+  <div class="exp">
        <% foundExp.forEach((oneExperience)=>{%>
         <h3>Shared by <%=oneExperience.name.first%> <%=oneExperience.name.last%> </h3>
-        <p>University: <%=oneExperience.university%></p>
-        <p>Tuition Fees: <%= oneExperience.fees%> BHD per semester</p>
+        <h4>University: <%=oneExperience.university%></h4>
+        <h4>Tuition Fees: <%= oneExperience.fees%> BHD per semester</h4>
         <p>About the major: <%= oneExperience.aboutMajor%></p>
         <p>Difficulties Faced: <%= oneExperience.challanges%></p>
-        <p>Contact me on instagram If you had any more inquiry about the major</p>
-        <p>@<%= oneExperience.contact%></p>
+        <h6>Contact me on instagram If you had any more inquiry about the major</h6>
+        <h6>@<%= oneExperience.contact%></h6>
 
-       <% })%>
-       </div>
-       <div class="share">
-         <a href="/exp/<%= foundMajor._id %>/new">Share Your Experience in <%= foundMajor.name %></a>
-       </div>
+        <% })%>
+      </div>
+       
        
 </body>
 </html>

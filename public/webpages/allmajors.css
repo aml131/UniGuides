@@ -83,5 +83,7 @@ transition: outline 0.3s ease 0s;
 .find{
     position:fixed;
     bottom:56px;
-    left:655px
+    display: flex;
+    width: 100%;
+    justify-content: center;
 }

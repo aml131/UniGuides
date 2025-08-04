@@ -77,9 +77,9 @@ color:#454a85;
 }
 
 .footer {
+  position: fixed;
   font-family:"Raleway" ;
     font-size: small;
-  position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;

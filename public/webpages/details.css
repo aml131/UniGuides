@@ -1,12 +1,48 @@
+.exp{
+    background-color: #FDFBEA;
+    text-wrap: wrap;
+    border-radius: 20px;
+    margin: 0 auto;
+    opacity: 85%;
+padding-top: 5px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  text-align: left;
+}
+
+.exp h3{
+    font-weight: 400;
+    background: linear-gradient(240deg, rgba(249, 219, 207, 1) 0%, rgba(210, 208, 238, 1) 100%);
+    border-radius: 30px;
+    font-size: 30px;
+    max-width: fit-content;
+    height: 50px;
+    display: flex;
+     align-items: center;
+  justify-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+h1{
+    max-width: 700px;
+    margin-left: 10px;
+}
+
+
+/* the button only */
 .share{
+    margin-right: 10px;
+    /* transform: translateY(-110px); */
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+    align-items: flex-end;
     flex-direction: column;
 }
     
 .share a{
-    margin-top: 10px;
     color: #454A85;
     display: flex;
     border-radius: 30px;
@@ -29,9 +65,4 @@ transition: outline 0.3s ease 0s;
 .share a:hover {
   outline: 1.7px solid #454A85;
   transform: scale(1);
-}
-.share{
-    position:fixed;
-    bottom:56px;
-    left:607px
 }
