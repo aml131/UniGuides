@@ -4,18 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/webpages/createmajor.css">
 </head>
 <body>
      <%- include('../partials/navbar2') %>
     <!-- title -->
-    <h1>Create a new major</h1>
+     <div class="create">
+    <h1>Add your major</h1>
     <!-- form -->
     <form action="/majors" method='post'>
-    <label for="name">Major:</label>
-    <input type="text" name="name" id='name'>
+    <label for="name"></label>
+    <input type="text" name="name" id='name'> <br> <br>
 
     <label for="submit"></label>
     <button type="submit">Create</button>
     </form>
+    </div>
 </body>
 </html>

@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/webpages/allmajors.css">
 </head>
 <body>
      <%- include('../partials/navbar2') %>
     <h1>All Majors</h1>
     <div class="majors">
-    <% allMajors.forEach((oneMajor)=>{ %>
-        <h2>
-        <li>
-            <%=oneMajor.name%>
-        </li>
-        </h2>
+        <% allMajors.forEach((oneMajor)=>{ %>
+            
+        <div class="parent">
+            <div class="container">
+                <h2><%=oneMajor.name%></h2>
+                <span>Hear from <a href="/exp/<%= oneMajor._id%>"><%=oneMajor.name%></a> students!</span>
+            </div>
         </div>
-
-        <div class="links">
-        Hear from <a href="/exp/<%= oneMajor._id%>"><%=oneMajor.name%></a> students!
-</div>
-        <%})%>
-    </h2>
+        <% }) %>
+    </div>
+    <p>Can't find your major?</p>
+    <a href="/majors/new">Add it!</a>
 </body>
 </html>
