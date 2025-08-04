@@ -5,6 +5,10 @@
     border-radius: 20px;
     margin: 0 auto;
     opacity: 85%;
+  transition: transform 0.3s ease;
+}
+.container:hover {
+  transform: translateY(-5px);
 }
 
 .majors {

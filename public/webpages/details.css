@@ -3,21 +3,27 @@
     justify-content: center;
     flex-direction: row;
     margin-bottom: 52px;
+    flex-wrap: wrap; 
     gap: 20px;
 }
 
 .expboard{
+    flex-direction: column;
+    overflow-y: auto; 
+     height: 400px;
     background-color: #FBF8EC; 
     border-radius: 20px;
 padding: 20px;
 box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 opacity: 80%;
 width: 600px;
-height: 700;
  word-wrap: break-word; 
   overflow-wrap: break-word;
   white-space: normal; 
   transition: transform 0.3s ease;
+}
+.expboard:hover {
+  transform: translateY(-5px);
 }
 
 .expboard h4 {
@@ -29,9 +35,6 @@ height: 700;
 }
 
 
-.expboard:hover {
-  transform: translateY(-5px);
-}
 
 .exp h3{
     color: #454A85;
@@ -54,6 +57,44 @@ h1{
     margin-left: 10px;
 }
 
+.exp p{
+    color: #2D3054;
+    transform: translateY(-20px);
+font-size: large;
+}
+
+.exp h6{
+  text-align: center;
+  font-size: 17px;
+  font-weight: 400;
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+ .contacttext{
+     color: #454A85 ;
+    font-weight: 400;
+    background: linear-gradient(240deg, rgba(249, 219, 207, 1) 0%, rgba(210, 208, 238, 1) 100%);;
+    border-radius: 30px;
+    font-size: 20px;
+    height: 50px;
+    width: 95%;
+    margin: auto;
+    display: flex;
+     align-items: center;
+     text-align: center;
+  justify-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+ }
+
+ .ig{
+    color: #454A85;
+ }
 
 /* the button only */
 .share{
