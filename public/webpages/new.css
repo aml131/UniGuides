@@ -1,0 +1,109 @@
+.board{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.text h3{
+    color: #454A85;
+    font-size:20px ;
+    font-weight: 400;
+}
+.text :first-child{
+    font-size: 30px;
+}
+.text :last-child{
+   color: #454A85;
+    font-weight: 400;
+    background: linear-gradient(240deg, rgba(249, 219, 207, 1) 0%, rgba(210, 208, 238, 1) 100%);
+    border-radius: 30px;
+    font-size: 20px;
+    max-width: fit-content;
+    height: 50px;
+    display: flex;
+     align-items: center;
+  justify-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+form{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+     width: fit-content;
+  margin-bottom: 52px;
+  text-align: left;
+  font-size: 20px;
+    background-color:#FDFBEA ;
+    opacity: 90%;
+    color: #454A85;
+    border-radius: 30px;
+    padding: 20px;
+    font-size: 20px;
+  transition: transform 0.3s ease;
+}
+form:hover {
+  transform: translateY(-5px);
+}
+
+textarea,
+input{
+    font-family: 'Raleway';
+  font-size: medium;
+    text-align: center;
+    color:#886dc7;
+    border-radius: 30px;
+    border: none;
+    margin-top: 10px;
+    height: 50px;
+    width: 230px;
+    opacity: 90%;
+}
+select{
+   font-family: 'Raleway';
+  font-size: medium;
+    text-align: center;
+    color:#886dc7;
+    border-radius: 30px;
+    border: none;
+    margin-top: 10px;
+    height: 50px;
+    width: 230px;
+    opacity: 90%; 
+}
+
+::placeholder{
+    padding-left: 20px;
+text-align: left;
+    font-family: "Raleway";
+    font-size: medium;
+    color:#886dc7;
+}
+
+button{
+     align-self: center;
+  font-family: 'Raleway';
+  font-weight: 420;
+    background: #F9DBCF;
+    background: linear-gradient(13deg, rgba(249, 219, 207, 1) 0%, rgba(210, 208, 238, 1) 68%);
+    color: #454A85;
+    width: 230px;
+    height: 50px;
+    border-radius: 30px;
+    border:none;
+    font-size: 20px; 
+    cursor: pointer;
+  outline: 0px solid #F3EAEF;
+transition: outline 0.3s ease 0s;
+}
+button:hover {
+  outline: 1.7px solid #454A85;
+  transform: scale(1);
+}
+
+.btn{
+  display: flex;
+  justify-content: center; 
+}

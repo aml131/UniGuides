@@ -4,16 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/webpages/new.css">
 </head>
 <body>
     <%- include('../partials/navbar2') %>
-   <h1>Share your experience</h1> 
+    <h1>Share your experience</h1> 
+    <div class="board">
+    <div class="text">
    <h3><%= foundMajor.name %> </h3>
    <h3>Shared by: <%=user.first %> <%= user.last%></h3>
-   <h3>Fill in your info 👇</h3>
+
+   </div>
+   <div class="form">
    <form action="/exp/<%=foundMajor._id%>" method="post">
    <!-- Select -->
-    <label for="university">University:</label>
+    <label for="university">University</label> 
   <select name="university" id="university">
   <option value="" disabled selected>Select your university</option>
   <option value="Bahrain Polytechnic">Bahrain Polytechnic</option>
@@ -31,20 +36,24 @@
   </select> <br> <br>
 
 <!-- fees -->
-<label for="fees">Tuition Fees (per semester):</label>
+<label for="fees">Tuition Fees (per semester)</label> 
 <input type="number" name="fees" id="fees" placeholder="BHD"> <br> <br>
 
 <!-- difficulties -->
-<label for="challanges">Difficulties Faced :</label>
+<label for="challanges">Difficulties Faced</label> 
 <textarea name="challanges" id="challanges" rows="2" cols="40" placeholder="Challenges?"></textarea> <br> <br>
 <!-- about major -->
- <label for="aboutMajor"> About your major:</label>
-<textarea name="aboutMajor" id="aboutMajor" rows="2" cols="40" placeholder="Tell us about your experience"></textarea> <br> <br>
+ <label for="aboutMajor"> About your major</label> 
+<textarea name="aboutMajor" id="aboutMajor" rows="2" cols="40" placeholder="Tell us about your experience"></textarea>  <br><br>
 <!-- contact -->
-<label for="contact">Contact:</label>
+<label for="contact">Contact</label> 
 <input type="text" name="contact" id="contact" placeholder="Your Instagram Account"> <br> <br>
 <!-- submit -->
+ <div class="btn">
 <button type="submit">Share</button>
+</div>
+</div>
+</div>
 
    </form>
    <%- include('../partials/footer') %>
