@@ -1,21 +1,44 @@
 .exp{
-    background-color: #FDFBEA;
-    text-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 52px;
+    gap: 20px;
+}
+
+.expboard{
+    background-color: #FBF8EC; 
     border-radius: 20px;
-    margin: 0 auto;
-    opacity: 85%;
-padding-top: 5px;
-  padding-right: 10px;
-  padding-bottom: 5px;
-  padding-left: 10px;
-  text-align: left;
+padding: 20px;
+box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+opacity: 80%;
+width: 600px;
+height: 700;
+ word-wrap: break-word; 
+  overflow-wrap: break-word;
+  white-space: normal; 
+  transition: transform 0.3s ease;
+}
+
+.expboard h4 {
+  margin: 5px 0;
+  transform: translateY(-70px);
+  font-weight: 500;
+  color: #454A85;
+  text-align: right;
+}
+
+
+.expboard:hover {
+  transform: translateY(-5px);
 }
 
 .exp h3{
+    color: #454A85;
     font-weight: 400;
-    background: linear-gradient(240deg, rgba(249, 219, 207, 1) 0%, rgba(210, 208, 238, 1) 100%);
+    background: linear-gradient(240deg, rgba(249, 219, 207, 1) 0%, rgba(210, 208, 238, 1) 100%);;
     border-radius: 30px;
-    font-size: 30px;
+    font-size: 20px;
     max-width: fit-content;
     height: 50px;
     display: flex;
@@ -35,7 +58,7 @@ h1{
 /* the button only */
 .share{
     margin-right: 10px;
-    /* transform: translateY(-110px); */
+    transform: translateY(-113px);
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;

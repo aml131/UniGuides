@@ -76,20 +76,6 @@ color:#454a85;
   animation: heartbeat116 1.5s ease-in-out 0.3s infinite;
 }
 
-.footer {
-  position: fixed;
-  font-family:"Raleway" ;
-    font-size: small;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #FEFBEA;
-  color: #454A85;
-  text-align: center;
-  border-top-left-radius: 30px;
-border-top-right-radius: 30px;
-}
-
 h1{
     font-size: 72px;
     color: #2D3054;

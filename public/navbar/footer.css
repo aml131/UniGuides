@@ -1,0 +1,13 @@
+.footer {
+    position: fixed;
+  font-family:"Raleway" ;
+    font-size: small;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #FEFBEA;
+  color: #454A85;
+  text-align: center;
+  border-top-left-radius: 30px;
+border-top-right-radius: 30px;
+}
