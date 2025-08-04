@@ -9,6 +9,7 @@
 <body>
      <%- include('../partials/navbar2') %>
     <h1>Update experience</h1>
+    <div class="board">
     <form action="/exp/updateExp/<%= exp._id %>?_method=PUT" method="post">
     <label for="university">University:</label>
   <select name="university" id="university">
@@ -41,9 +42,12 @@
 <label for="contact">Contact:</label>
 <input value="<%=exp.contact%>" type="text" name="contact" id="contact" placeholder="Your Instagram Account"> <br> <br>
 <!-- submit -->
+ <div class="btn">
 <button type="submit">Update</button>
+</div>
 
 </form>
+</div>
 <%- include('../partials/footer') %>
 </body>
 </html>
