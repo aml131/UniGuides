@@ -23,3 +23,4 @@ I made this game as a project of the Software Engineering bootcamp in General As
 - Grid generator
 - Css Gradient
 - Lottie Files
+- Radius + shadow generator
