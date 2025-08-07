@@ -4,7 +4,7 @@
 
 
 ## Introduction
-I made this game as a project of the Software Engineering bootcamp in General Assembly. I was asked to make a full CRUD website. The website is made dor new graduates who are confused about choosing the right major or University.Users can read and share honest experiences from students who already went through these academic paths. By browsing shared stories and reviews, users can make better decisions.
+I made this game as a project of the Software Engineering bootcamp in General Assembly. I was asked to make a full CRUD website. The website is made for new graduates who are confused about choosing the right major or University.Users can read and share honest experiences from students who already went through these academic paths. By browsing shared stories and reviews, users can make better decisions.
 ## Used
 - Node.js & Express for the backend
 - EJS for templating
